@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahapetro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/30 21:03:54 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/01/31 19:35:49 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:37:17 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char *str, t_arr *arr)
 {
-	int	i;
-	int	num;
-	int	m;
+	int		i;
+	long	num;
+	int		m;
 
 	i = 0;
 	num = 0;
@@ -35,7 +35,13 @@ int	ft_atoi(const char *str)
 		num = num + (str[i] - 48);
 		i++;
 	}
-	return (num * m);
+	num = num * m;
+	if(num > 2147483647 || num < -2147483648)
+	{
+		arr->check = 1; // Set an error flag in the struct
+		return (0); // Return 0 if overflow occurs
+	}
+	return (num);
 }
 /*
 int main(void)

@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ahapetro <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 22:47:56 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/02/08 16:17:52 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/08 20:30:36 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 
@@ -17,6 +18,14 @@
 # include <stdio.h> 
 # include <string.h> 
 # include <unistd.h>
+
+typedef struct arr
+{
+	
+	char	**arr;
+	int		**arr_int;
+	long	check;
+}	t_arr;
 
 typedef struct s_list
 {
@@ -43,7 +52,7 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
-int		ft_atoi(const char *str);
+int		ft_atoi(const char *str,t_arr *srr);
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
