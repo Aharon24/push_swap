@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 16:08:07 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/08 21:58:32 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/09 16:31:51 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ t_s	*ft_new_list(int data)
 	return (new_node);
 }
 
-void ft_pintf_list(t_s *n)
+void ft_printf_list(t_s *n)
 {
 	t_s *temp;
 
@@ -35,4 +35,50 @@ void ft_pintf_list(t_s *n)
 		temp = temp->next;
 	}
 	ft_printf("NULL\n");
+}
+
+
+t_s *ft_add_list(char **arr,t_s *p, t_arr *srr)
+{
+	int		i;
+	t_s		*run = NULL;
+	t_s		*kub;
+	t_s		*start;
+
+	run = p;
+	i = 0;
+	if(p == NULL)
+	{
+		p = ft_new_list(ft_atoi(arr[i],srr));
+		start = p;
+		run = p;
+		i++;
+	}
+	else
+		start = p;
+	while (run->next)
+		run = run->next;
+	while (arr[i])
+	{
+		kub = ft_new_list(ft_atoi(arr[i],srr));
+		if(srr->check == 1)
+			return(NULL);
+		run->next = kub;
+		run = run->next;
+		i++;
+	}
+	return (start);
+}
+
+int ft_list_len(t_s *n)
+{
+	int i;
+
+	i = 0;
+	while(n)
+	{
+		i++;
+		n = n->next;
+	}
+	return(i);
 }

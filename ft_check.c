@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 18:14:24 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/08 21:55:05 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/09 17:27:53 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,15 +69,18 @@ int	ft_check_signed(char **arr)
 	while (arr[i])
 	{
 		j = 0;
-		ft_printf("arr[%d] = %s\n", i, arr[i]);
+		sin_minus = 0;
+		sin_plus = 0;
 		while (arr[i][j])
 		{
 			if (arr[i][j] == '-')
 				sin_minus++;
 			else if(arr[i][j] == '+')
 				sin_plus++;
-			else if (sin_plus == 2 || sin_minus == 2)
+			else if ((sin_plus == 2 || sin_minus == 2))
 				return (0);
+			else if(sin_minus == 1 && sin_plus == 1 )
+				return(0);
 			j++;
 		}
 		i++;
@@ -107,3 +110,20 @@ int ft_strlen_arr(char **arr)
 	return(1);
 }
 
+int ft_check_dublicate(t_s *n)
+{
+	t_s *tab;
+
+	while(n->next)
+	{
+		tab = n->next;
+		while(tab)
+		{
+			if(n->data == tab->data)
+				return(0);
+			tab = tab->next;
+		}
+		n = n->next;
+	}
+	return (1);
+}

@@ -6,7 +6,7 @@ INCLUDES = -I.  -ILibft -Ift_printf
 
 SRCS = push_swap.c  ft_printf/ft_char.c ft_printf/ft_format.c ft_printf/ft_puthex_x.c ft_printf/printf.c \
 main.c  ft_memory.c Libft/ft_split.c ft_get_number.c ft_check.c ft_exit.c ft_convert_int.c ft_list.c	\
-Libft/ft_strlen.c Libft/ft_atoi.c
+Libft/ft_strlen.c Libft/ft_atoi.c sort_function.c sort_function2.c sort_function3.c sort.c
   
 OBJS = $(SRCS:.c=.o)
 

@@ -2,4 +2,6 @@
     "files.associations": {
         "push_swap.h": "c"
     }
+    CompileFlags:
+  Add: [-x, c, -std=c17]
 }
