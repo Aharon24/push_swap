@@ -69,6 +69,7 @@ int	ft_check_signed(char **arr)
 	while (arr[i])
 	{
 		j = 0;
+		ft_printf("arr[%d] = %s\n", i, arr[i]);
 		while (arr[i][j])
 		{
 			if (arr[i][j] == '-')
@@ -89,12 +90,16 @@ int ft_strlen_arr(char **arr)
 {
 	int i;
 	int j;
+
+
+	i = 0;
 	while(arr[i])
 	{
+
 		if( ft_strlen(arr[i]) > 11)
 		{
 			ft_printf("Error\n");
-			ft_free(arr);
+			//ft_free(arr);
 			return (0);
 		}
 		i++;

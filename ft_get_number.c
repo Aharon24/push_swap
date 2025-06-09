@@ -64,24 +64,26 @@ char **ft_argv_get_number(char **arr, char **argv, t_s *n)
 	while(argv[index])
 	{
 		i = 0;
+
 		arr_red = ft_split(argv[index], ' ');
 		if (ft_check_signed(arr_red) == 0)
 			return (NULL);
-		if(ft_strlen_arr(arr_red) == 0)///free
-			return (NULL);
-		if(!p)
-		{
-			n->data = ft_atoi(arr_red[i],&srr);
-			if(n->data > 2147483647 || n->data < -2147483648)
-				return(NULL);
-			p = n;
-		}
+		// if(ft_strlen_arr(arr_red) == 0)///free
+		// 	return (NULL);
+		// if(!p)
+		// {
+		// 	ft_printf("1");
+		// 	n->data = ft_atoi(arr_red[i],&srr);
+		// 	if(n->data > 2147483647 || n->data < -2147483648)
+		// 		return(NULL);
+		// 	p = n;
+		// }
 		i++;
-		ft_add_list(arr_red,&srr);
-		ft_free(arr_red);
+		//ft_add_list(arr_red,n,&srr);
+		//ft_free(arr_red);
 		index++;
 	}
-	ft_pintf_list(n);
+	//ft_pintf_list(n);
 	// // while(arr[i])
 	// // {
 	// // 	ft_printf("%s",arr[i]);
@@ -103,6 +105,7 @@ t_s *ft_add_list(char **arr,t_s *n, t_arr *srr)
 	while(run)
 	{
 		run =  run->next;
+		///ft_printf("2\n");
 	}
 	while(arr[i])
 	{
