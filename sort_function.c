@@ -14,7 +14,7 @@
 
 void	sa(t_s **a)
 {
-	int number;
+	int	number;
 
 	number = 0;
 	if (!a || !*a)
@@ -22,12 +22,11 @@ void	sa(t_s **a)
 	number = (*a)->data;
 	(*a)->data = (*a)->next->data;
 	(*a)->next->data = number;
-        
 }
 
-void sb(t_s **b)
+void	sb(t_s **b)
 {
-	int number;
+	int	number;
 
 	number = 0;
 	if (!b || !*b)
@@ -37,18 +36,17 @@ void sb(t_s **b)
 	(*b)->next->data = number;
 }
 
-void ss(t_s **a , t_s **b)
+void	ss(t_s **a, t_s **b)
 {
 	sa(a);
 	sb(b);
 }
 
-
-void pa(t_s **a, t_s **b)
+void	pa(t_s **a, t_s **b)
 {
-	t_s *temb;
+	t_s	*temb;
 
-	if(!*b || !b)
+	if (!*b || !b)
 		return ;
 	temb = *b;
 	*b = (*b)->next;
@@ -56,13 +54,13 @@ void pa(t_s **a, t_s **b)
 	*a = temb;
 }
 
-void pb(t_s **a, t_s **b)
+void	pb(t_s **a, t_s **b)
 {
-	t_s  *temb;
+	t_s	*temb;
 
-	if(!*a || !a)
-		return	;
-	temb  = *a;
+	if (!*a || !a)
+		return ;
+	temb = *a;
 	*a = (*a)->next;
 	temb->next = *b;
 	*b = temb;

@@ -36,10 +36,10 @@ int	ft_atoi(const char *str, t_arr *arr)
 		i++;
 	}
 	num = num * m;
-	if(num > 2147483647 || num < -2147483648)
+	if (num > 2147483647 || num < -2147483648)
 	{
-		arr->check = 1; // Set an error flag in the struct
-		return (0); // Return 0 if overflow occurs
+		arr->check = 1;
+		return (0);
 	}
 	return (num);
 }

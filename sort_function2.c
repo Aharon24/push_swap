@@ -14,16 +14,14 @@
 
 void	ra(t_s **a)
 {
-	t_s *first;
-	t_s *last;
-	
+	t_s	*first;
+	t_s	*last;
+
 	if (!a || !*a || (*a)->next)
 		return ;
-	
 	first = *a;
 	*a = (*a)->next;
 	first->next = NULL;
-	
 	last = *a;
 	while (last->next)
 		last = last->next;
@@ -32,35 +30,30 @@ void	ra(t_s **a)
 
 void	rb(t_s **b)
 {
-	t_s *first;
-	t_s *last;
-	
-	if(!b || !*b || !(*b)->next)
+	t_s	*first;
+	t_s	*last;
+
+	if (!b || !*b || !(*b)->next)
 		return ;
-	
 	first = *b;
 	*b = (*b)->next;
 	first->next = NULL;
-	
 	last = *b;
 	while (last->next)
 		last = last->next;
 	last->next = first;
-	
 }
 
-
-void	rr(t_s **a , t_s **b)
+void	rr(t_s **a, t_s **b)
 {
 	ra(a);
 	rb(b);
 }
 
-
-void rra(t_s **a)
+void	rra(t_s **a)
 {
-	t_s *last;
-	t_s  *tmp;
+	t_s	*last;
+	t_s	*tmp;
 
 	if (!a ||!*a || (*a)->next)
 		return ;
@@ -73,11 +66,11 @@ void rra(t_s **a)
 	*a = tmp;
 }
 
-void rrb(t_s **b)
+void	rrb(t_s **b)
 {
-	t_s *last;
-	t_s *tmp;
-	
+	t_s	*last;
+	t_s	*tmp;
+
 	if (!b || !*b || !(*b)->next)
 		return ;
 	last = *b;
@@ -88,4 +81,3 @@ void rrb(t_s **b)
 	tmp->next = *b;
 	*b = tmp;
 }
-

@@ -21,9 +21,8 @@ void	ft_push_swap(t_s **a)
 		if ((*a)->data > (*a)->next->data)
 			sa(a);
 	}
-    else if (ft_list_len(*a) == 3)
+	else if (ft_list_len(*a) == 3)
 		ft_sort_3(a);
-	else if(ft_list_len(*a) == 4)
+	else if (ft_list_len(*a) == 4)
 		ft_sort_4(a);
-	
 }

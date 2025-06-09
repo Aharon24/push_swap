@@ -14,26 +14,23 @@
 
 # define PUSH_SWAP_H
 
-#include "ft_printf/ft_printf.h"
-#include <stdlib.h>
-#include "Libft/libft.h"
+# include "ft_printf/ft_printf.h"
+# include <stdlib.h>
+# include "Libft/libft.h"
 
 typedef struct s
 {
 	int			data;
-	struct s*	next;
+	struct s	*next;
 }	t_s;
 
-
-
-
-t_s		*ft_get_number(int argc, char **argv, char **arr,t_s *n);
-t_s		*ft_get_number_in_string(char **arr, char *argv,t_s *n);
-t_s		*ft_argv_get_number(char **arr, char **argv,t_s *n);
+t_s		*ft_get_number(int argc, char **argv, char **arr, t_s *n);
+t_s		*ft_get_number_in_string(char **arr, char *argv, t_s *n);
+t_s		*ft_argv_get_number(char **arr, char **argv, t_s *n);
 
 /// free 
 void	ft_free(char **arr);
-void ft_list_free(t_s *n);
+void	ft_list_free(t_s *n);
 
 ///chesk
 
@@ -46,7 +43,7 @@ void	ft_exit(void);
 //list
 t_s		*ft_new_list(int data);
 void	ft_printf_list(t_s *n);
-t_s		*ft_add_list(char **arr,t_s *p, t_arr *srr);
+t_s		*ft_add_list(char **arr, t_s *p, t_arr *srr);
 int		ft_list_len(t_s *n);
 
 ///convert 
@@ -70,11 +67,11 @@ void	pb(t_s **a, t_s **b);
 
 void	ra(t_s **a);
 void	rb(t_s **b);
-void	rr(t_s **a , t_s **b);
+void	rr(t_s **a, t_s **b);
 void	rra(t_s **a);
 void	rrb(t_s **b);
 
 //f3
-void	rrr(t_s **a ,t_s **b);
+void	rrr(t_s **a, t_s **b);
 
 #endif

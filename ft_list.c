@@ -24,9 +24,9 @@ t_s	*ft_new_list(int data)
 	return (new_node);
 }
 
-void ft_printf_list(t_s *n)
+void	ft_printf_list(t_s *n)
 {
-	t_s *temp;
+	t_s	*temp;
 
 	temp = n;
 	while (temp)
@@ -37,8 +37,7 @@ void ft_printf_list(t_s *n)
 	ft_printf("NULL\n");
 }
 
-
-t_s *ft_add_list(char **arr,t_s *p, t_arr *srr)
+t_s	*ft_add_list(char **arr, t_s *p, t_arr *srr)
 {
 	int		i;
 	t_s		*run = NULL;
@@ -47,9 +46,9 @@ t_s *ft_add_list(char **arr,t_s *p, t_arr *srr)
 
 	run = p;
 	i = 0;
-	if(p == NULL)
+	if (p == NULL)
 	{
-		p = ft_new_list(ft_atoi(arr[i],srr));
+		p = ft_new_list(ft_atoi(arr[i], srr));
 		start = p;
 		run = p;
 		i++;
@@ -60,9 +59,9 @@ t_s *ft_add_list(char **arr,t_s *p, t_arr *srr)
 		run = run->next;
 	while (arr[i])
 	{
-		kub = ft_new_list(ft_atoi(arr[i],srr));
-		if(srr->check == 1)
-			return(NULL);
+		kub = ft_new_list(ft_atoi(arr[i], srr));
+		if (srr->check == 1)
+			return (NULL);
 		run->next = kub;
 		run = run->next;
 		i++;
@@ -70,15 +69,15 @@ t_s *ft_add_list(char **arr,t_s *p, t_arr *srr)
 	return (start);
 }
 
-int ft_list_len(t_s *n)
+int	ft_list_len(t_s *n)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	while(n)
+	while (n)
 	{
 		i++;
 		n = n->next;
 	}
-	return(i);
+	return (i);
 }

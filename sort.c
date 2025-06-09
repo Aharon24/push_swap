@@ -14,54 +14,51 @@
 
 void	ft_sort_3(t_s **a)
 {
-	int first;
-	int second;
-	int threed;
+	int	first;
+	int	second;
+	int	threed;
 
-	first  = (*a)->data;
+	first = (*a)->data;
 	second = (*a)->next->data;
 	threed = (*a)->next->next->data;
-	if(first  > second && second < threed && first < threed)
+	if (first > second && second < threed && first < threed)
 		sa(a);
-	else if (first  > second && second > threed )
+	else if (first > second && second > threed)
 	{
 		sa(a);
 		rra(a);
 	}
-	else if(first  > second && second < threed && first > threed )
+	else if (first > second && second < threed && first > threed)
 		ra(a);
-	else if(first  < second && second > threed && first < threed)
+	else if (first < second && second > threed && first < threed)
 	{
 		sa(a);
 		ra(a);
 	}
-	else if(first  < second && second > threed && first > threed)
+	else if (first < second && second > threed && first > threed)
 		rra(a);
 }
-
 
 void	ft_sort_4(t_s **a)
 {
-	int index;
+	int	index;
 
 	index = 0;
-	index =  ft_find_index_min(a);
-	
+	index = ft_find_index_min(a);
 }
 
-
-int ft_find_index_min(t_s *a)
+int	ft_find_index_min(t_s *a)
 {
-	int min;
+	int	min;
 	int	i;
-	int index;
+	int	index;
 
 	i = 0;
 	index = 0;
 	min = 2147483647;
-	while(a)
+	while (a)
 	{
-		if(a->data < min)
+		if (a->data < min)
 		{
 			min = a->data;
 			index = i;
@@ -69,5 +66,5 @@ int ft_find_index_min(t_s *a)
 		a = a->next;
 		i++;
 	}
-	return(min);
+	return (min);
 }
