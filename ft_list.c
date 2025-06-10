@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 16:08:07 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/09 16:31:51 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/10 17:36:18 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_printf_list(t_s *n)
 t_s	*ft_add_list(char **arr, t_s *p, t_arr *srr)
 {
 	int		i;
-	t_s		*run = NULL;
+	t_s		*run;
 	t_s		*kub;
 	t_s		*start;
 

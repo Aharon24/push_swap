@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:31:47 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/09 19:39:00 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/10 17:42:23 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,12 +39,32 @@ void	ft_sort_3(t_s **a)
 		rra(a);
 }
 
-void	ft_sort_4(t_s **a)
+void	ft_sort_4(t_s **a, t_s **b)
 {
 	int	index;
 
-	index = 0;
-	index = ft_find_index_min(a);
+	index = ft_find_index_min(*a);
+	if (index == 1)
+		sa(a);
+	else if (index == 2)
+	{
+		rra(a);
+		rra(a);
+	}
+	else if (index == 3)
+		rra(a);
+	pb(a, b);
+	ft_sort_3(a);
+	pa(a, b);
+}
+
+void	ft_sort_5(t_s **a, t_s **b)
+{
+	ft_push_min(a, b);
+	ft_push_min(a, b);
+	ft_sort_3(a);
+	pa(a, b);
+	pa(a, b);
 }
 
 int	ft_find_index_min(t_s *a)
@@ -66,5 +86,27 @@ int	ft_find_index_min(t_s *a)
 		a = a->next;
 		i++;
 	}
-	return (min);
+	return (index);
+}
+
+void	ft_push_min(t_s **a, t_s**b)
+{
+	int	index;
+
+	index = ft_find_index_min(*a);
+	if (index == 1)
+		sa(a);
+	else if (index == 2)
+	{
+		ra(a);
+		ra(a);
+	}
+	else if (index == 3)
+	{
+		rra(a);
+		rra(a);
+	}
+	else if (index == 4)
+		rra(a);
+	pb(a, b);
 }

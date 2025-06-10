@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 18:14:24 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/09 17:27:53 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/10 17:28:17 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,6 @@ int	ft_strlen_arr(char **arr)
 		if (ft_strlen(arr[i]) > 11)
 		{
 			ft_printf("Error\n");
-			//ft_free(arr);
 			return (0);
 		}
 		i++;

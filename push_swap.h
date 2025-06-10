@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 18:18:03 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/09 19:18:58 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/10 19:50:42 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,10 @@ int		ft_check_string(char **arr, char *argv);
 int		ft_check_argv(char **arr, char **argv);
 int		ft_strlen_arr(char **arr);
 int		ft_check_dublicate(t_s *n);
+
+///find	
+int		ft_find_index_min(t_s *a);
+
 //exit
 void	ft_exit(void);
 //list
@@ -55,7 +59,21 @@ int		ft_check_signed(char **arr);
 
 void	ft_push_swap(t_s **a);
 void	ft_sort_3(t_s **a);
-
+void	ft_sort_4(t_s **a, t_s **b);
+void	ft_sort_5(t_s **a, t_s **b);
+void	ft_push_min(t_s **a, t_s**b);
+void	ft_norm(t_s **a);
+int		*ft_fill(t_s *a, int size, int *arr);
+void	ft_sort_bubble(int *arr);
+void	ft_norm(t_s **a);
+int		*ft_fill(t_s *a, int size, int *arr);
+void	ft_sort_bubble(int *arr);
+void	ft_butterfly(t_s **a, t_s **b);
+void	ft_a_to_b(t_s **a, t_s **b, int n);
+int		ft_sqrt(int	size);
+int		ft_max(t_s *b);
+int		ft_max_index(t_s *b);
+void	max_to_top(t_s **b);
 //f
 void	sa(t_s **a);
 void	sb(t_s **b);

@@ -6,15 +6,14 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 14:11:53 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/08 14:12:02 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/10 17:29:50 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "push_swap.h"
 
-void ft_exit(void)
+void	ft_exit(void)
 {
-    ft_printf("Error\n");
-    exit(0);
+	ft_printf ("Error\n");
+	exit(0);
 }
