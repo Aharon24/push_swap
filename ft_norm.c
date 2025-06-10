@@ -18,17 +18,17 @@ void	ft_norm(t_s **a)
 	int	size;
 	t_s	*tmp;
 	int	i;
-	
-	tmp = *a; 
+
+	tmp = *a;
 	size = ft_list_len(*a);
 	arr = ft_fill(*a, size, arr);
 	ft_sort_bubble(arr);
 	while (tmp)
 	{
 		i = 0;
-		while(i < size)
+		while (i < size)
 		{
-			if(arr[i] == tmp->data)
+			if (arr[i] == tmp->data)
 			{
 				tmp->data = i;
 				break ;
@@ -42,7 +42,7 @@ void	ft_norm(t_s **a)
 
 int	*ft_fill(t_s *a, int size, int *arr)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	arr = malloc(size * sizeof(int));
@@ -57,25 +57,24 @@ int	*ft_fill(t_s *a, int size, int *arr)
 	return (arr);
 }
 
-
-void ft_sort_bubble(int *arr)
+void	ft_sort_bubble(int *arr)
 {
-	int i;
+	int	i;
 	int	j;
-	int tmp;
+	int	tmp;
 
 	tmp = 0;
 	i = 0;
-	while(arr[i])
+	while (arr[i])
 	{
 		j = 0;
-		while(arr[j + 1])
+		while (arr[j + 1])
 		{
-			if(arr[j] > arr[j + 1])
+			if (arr[j] > arr[j + 1])
 			{
 				tmp = arr[j];
 				arr[j] = arr[j + 1];
-				arr[j + 1] = tmp;	
+				arr[j + 1] = tmp;
 			}
 			j++;
 		}
@@ -85,36 +84,36 @@ void ft_sort_bubble(int *arr)
 
 void	ft_butterfly(t_s **a, t_s **b)
 {
-	int n;
+	int	n;
 
 	n = ft_sqrt(ft_list_len(*a));
-	ft_a_to_b(a,b,n);
+	ft_a_to_b(a, b, n);
 	while (*b)
 	{
 		max_to_top(b);
-		pa(a,b);
+		pa(a, b);
 	}
 }
 
 void	ft_a_to_b(t_s **a, t_s **b, int n)
 {
-	int count;
+	int	count;
 
 	count = 0;
 	while (*a)
 	{
 		if ((*a)->data <= count)
 		{
-			pb(a,b);
+			pb(a, b);
 			rb(b);
 			count++;
 		}
 		else if ((*a)->data <= count + n)
 		{
-			pb(a,b);
+			pb(a, b);
 			count++;
 		}
-		else 
+		else
 			ra(a);
 	}
 }

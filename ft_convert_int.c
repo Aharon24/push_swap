@@ -23,30 +23,17 @@ t_s	*ft_convert(char **arr, t_s *n)
 	i = 0;
 	if (ft_check_signed(arr) == 0)
 		return (NULL);
-	if (ft_strlen(arr[i]) > 11)
-		return (NULL);
 	if (!p)
 		p = ft_new_list (ft_atoi(arr[i], &srr));
 	if (srr.check == 1)
-	{
-		///ft_list_free(n);???
 		return (NULL);
-	}
 	i++;
 	n = p;
 	while (arr[i])
 	{
-		if (ft_strlen(arr[i]) > 11)
-		{
-			//////ft_list_free(n);?????
-			return (NULL);
-		}
 		p1 = ft_new_list(ft_atoi(arr[i], &srr));
 		if (srr.check == 1)
-		{
-			///ft_list_free(n);???
 			return (NULL);
-		}
 		p->next = p1;
 		p = p->next;
 		i++;

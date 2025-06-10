@@ -33,7 +33,6 @@ void	ft_push_swap(t_s **a)
 	else
 	{
 		ft_norm(a);
-		ft_butterfly(a,&b);
+		ft_butterfly(a, &b);
 	}
-		
 }

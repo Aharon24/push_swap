@@ -70,7 +70,7 @@ int		*ft_fill(t_s *a, int size, int *arr);
 void	ft_sort_bubble(int *arr);
 void	ft_butterfly(t_s **a, t_s **b);
 void	ft_a_to_b(t_s **a, t_s **b, int n);
-int		ft_sqrt(int	size);
+int		ft_sqrt(int size);
 int		ft_max(t_s *b);
 int		ft_max_index(t_s *b);
 void	max_to_top(t_s **b);

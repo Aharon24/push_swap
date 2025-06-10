@@ -64,13 +64,12 @@ void	rb(t_s **b)
 // 	(*b) = start;
 // }
 
-
 void	rr(t_s **a, t_s **b)
 {
 	t_s	*first;
 	t_s	*last;
 
-	if (!a || !*a || !b || !*b || !(*a)->next  || !(*b)->next)
+	if (!a || !*a || !b || !*b || !(*a)->next || !(*b)->next)
 		return ;
 	first = *a;
 	*a = (*a)->next;

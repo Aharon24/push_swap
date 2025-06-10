@@ -23,6 +23,7 @@ int	main(int argc, char *argv[])
 	if (argc <= 1)
 	{
 		ft_printf("Error\n");
+		ft_printf("aaa");
 		return (0);
 	}
 	if (ft_check_argv(set.arr, argv) == 0)
@@ -33,7 +34,7 @@ int	main(int argc, char *argv[])
 	n1 = ft_get_number(argc, argv, set.arr, &n);
 	if ((n1 == NULL) || ft_check_dublicate(n1) == 0)
 	{
-		ft_printf("Error\n");
+		ft_printf("Err2222or\n");
 		return (0);
 	}
 	ft_push_swap(&n1);

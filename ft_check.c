@@ -57,29 +57,25 @@ int	ft_check_argv(char **arr, char **argv)
 
 int	ft_check_signed(char **arr)
 {
-	int	i;
-	int	j;
-	int	sin_minus;
-	int	sin_plus;
+	int		i;
+	int		j;
+	t_arr	arr_s;
 
-	sin_minus = 0;
-	sin_plus = 0;
 	i = 0;
-	j = 0;
+	arr_s.sin_minus = 0;
+	arr_s.sin_plus = 0;
 	while (arr[i])
 	{
 		j = 0;
-		sin_minus = 0;
-		sin_plus = 0;
 		while (arr[i][j])
 		{
 			if (arr[i][j] == '-')
-				sin_minus++;
+				arr_s.sin_minus++;
 			else if (arr[i][j] == '+')
-				sin_plus++;
-			else if ((sin_plus == 2 || sin_minus == 2))
+				arr_s.sin_plus++;
+			if ((arr_s.sin_plus == 2 || arr_s.sin_minus == 2))
 				return (0);
-			else if (sin_minus == 1 && sin_plus == 1)
+			if (arr_s.sin_minus == 1 && arr_s.sin_plus == 1)
 				return (0);
 			j++;
 		}

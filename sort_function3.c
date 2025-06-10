@@ -17,7 +17,7 @@ void	rrr(t_s **a, t_s **b)
 	t_s	*last;
 	t_s	*tmp;
 
-	if (!a ||!*a || !b || !*b || !(*a)->next || !(*b)->next) 
+	if (!a || !*a || !b || !*b || !(*a)->next || !(*b)->next)
 		return ;
 	tmp = NULL;
 	last = *a;
@@ -39,23 +39,22 @@ void	rrr(t_s **a, t_s **b)
 	ft_printf("rrr\n");
 }
 
-
-int	ft_sqrt(int	size)
+int	ft_sqrt(int size)
 {
-	int i;
-	int n;
+	int	i;
+	int	n;
 
 	i = 0;
 	while (i <= size / 2)
 	{
 		if (i * i <= size)
-			n = i;		
+			n = i;
 		i++;
 	}
 	return (n);
 }
 
-int ft_max(t_s *b)
+int	ft_max(t_s *b)
 {
 	int	max;
 	int	i;
@@ -74,7 +73,7 @@ int ft_max(t_s *b)
 	return (max);
 }
 
-int ft_max_index(t_s *b)
+int	ft_max_index(t_s *b)
 {
 	int	max;
 	int	i;
@@ -96,13 +95,11 @@ int ft_max_index(t_s *b)
 	return (index);
 }
 
-
-
-void max_to_top(t_s **b)
+void	max_to_top(t_s **b)
 {
-	int max;
-	int index;
-	int size;
+	int	max;
+	int	index;
+	int	size;
 
 	size = ft_list_len(*b);
 	index = ft_max_index(*b);
@@ -114,5 +111,4 @@ void max_to_top(t_s **b)
 		else
 			rrb(b);
 	}
-	
 }

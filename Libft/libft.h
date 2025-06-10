@@ -24,6 +24,8 @@ typedef struct arr
 	char	**arr;
 	int		**arr_int;
 	long	check;
+	int		sin_minus;
+	int		sin_plus;
 }	t_arr;
 
 typedef struct s_list
@@ -51,7 +53,10 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
+//atoi
 int		ft_atoi(const char *str, t_arr *srr);
+void	ft_max_min_chek(long num, t_arr *arr);
+//atoi^
 void	*ft_calloc(size_t count, size_t size);
 char	*ft_strdup(const char *s1);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

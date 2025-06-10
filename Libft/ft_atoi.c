@@ -36,23 +36,16 @@ int	ft_atoi(const char *str, t_arr *arr)
 		i++;
 	}
 	num = num * m;
+	ft_max_min_chek(num, arr);
+	return (num);
+}
+
+void	ft_max_min_chek(long num, t_arr *arr)
+{
 	if (num > 2147483647 || num < -2147483648)
 	{
 		arr->check = 1;
-		return (0);
+		return ;
 	}
-	return (num);
+	arr->check = 0;
 }
-/*
-int main(void)
-{
-	char a[] = "-1234sd";
-	char b[] = "12345sb";
-	int a1 = ft_atoi(a);
-	int b1 = ft_atoi(b);
-	printf("-1234sd = %d\n",a1);
-	printf(" 12345sb = %d",b1);
-	printf(" 12345sb = %d",b1);
-	printf(" 12345sb = %d",b1);
-	
-}*/

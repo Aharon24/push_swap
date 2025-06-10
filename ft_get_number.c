@@ -39,7 +39,6 @@ t_s	*ft_get_number_in_string(char **arr, char *argv, t_s *n)
 
 	i = 0;
 	arr = ft_split(argv, ' ');
-	///free
 	n = ft_convert(arr, n);
 	if (n == NULL)
 		return (NULL);
@@ -61,7 +60,7 @@ t_s	*ft_argv_get_number(char **arr, char **argv, t_s *n)
 		arr_red = ft_split(argv[index], ' ');
 		if (ft_check_signed(arr_red) == 0)
 			return (NULL);
-		if (ft_strlen_arr(arr_red) == 0) ///free
+		if (ft_strlen_arr(arr_red) == 0)
 			return (NULL);
 		p = ft_add_list(arr_red, p, &srr);
 		free(arr_red);

@@ -30,7 +30,7 @@ void	sb(t_s **b)
 	int	number;
 
 	number = 0;
-	if (!b || !*b || !(*b)->next) 
+	if (!b || !*b || !(*b)->next)
 		return ;
 	number = (*b)->data;
 	(*b)->data = (*b)->next->data;
