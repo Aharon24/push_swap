@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:29:28 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/11 21:11:10 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:26:14 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_push_swap(t_s **a)
 	t_s	*b;
 
 	b = NULL;
-	if(ft_chek_push_swap(a) == 0)
+	if (ft_chek_push_swap(a) == 0)
 		return ;
 	if (ft_list_len(*a) == 1)
 		return ;
@@ -43,7 +43,7 @@ int	ft_chek_push_swap(t_s **a)
 {
 	t_s	*start;
 	int	i;
-	
+
 	i = 0;
 	start = *a;
 	while (start->next)
@@ -56,5 +56,4 @@ int	ft_chek_push_swap(t_s **a)
 		start = start->next;
 	}
 	return (i);
-	
 }

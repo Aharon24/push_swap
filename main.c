@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 18:14:46 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/11 21:50:42 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:29:47 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,16 +21,16 @@ int	main(int argc, char *argv[])
 
 	i = 0;
 	set.arr = NULL;
-	if (argc <= 1)
+	if (argc <= 1 || ft_check_argv(set.arr, argv) == 0)
 	{
 		ft_putstr_fd("Error\n", 2);
 		return (0);
 	}
-	if (ft_check_argv(set.arr, argv) == 0)
-	{
-		ft_putstr_fd("Error\n", 2);
-		return (0);
-	}
+	// if (ft_check_argv(set.arr, argv) == 0)
+	// {
+	// 	ft_putstr_fd("Error\n", 2);
+	// 	return (0);
+	// }
 	n1 = ft_get_number(argc, argv, set.arr, &n);
 	if ((n1 == NULL) || ft_check_dublicate(n1) == 0)
 	{

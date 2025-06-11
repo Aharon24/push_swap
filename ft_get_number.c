@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 17:15:12 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/11 22:00:40 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 22:28:18 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,15 +67,10 @@ t_s	*ft_argv_get_number(char **argv, t_s *n)
 	while (argv[index])
 	{
 		if (ft_check_signed(&argv[index]) == 0)
-		{
 			return (NULL);
-		}
 		arr_red = ft_split(argv[index], ' ');
 		if (ft_check_normal_number(arr_red) == 0)
-		{
-			ft_printf("ft_chek");
 			return (NULL);
-		}
 		if (srr.check == 1)
 			return (NULL);
 		if (ft_strlen_arr(arr_red) == 0)
