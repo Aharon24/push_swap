@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/08 18:00:17 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/10 17:27:26 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:40:35 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_s	*ft_convert(char **arr, t_s *n)
 
 	p = NULL;
 	i = 0;
-	if (ft_check_signed(arr) == 0)
+	if (arr == NULL || ft_check_signed(arr) == 0)
 		return (NULL);
 	if (!p)
 		p = ft_new_list (ft_atoi(arr[i], &srr));

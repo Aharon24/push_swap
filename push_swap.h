@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 18:18:03 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/10 19:50:42 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 21:12:03 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,12 @@ typedef struct s
 
 t_s		*ft_get_number(int argc, char **argv, char **arr, t_s *n);
 t_s		*ft_get_number_in_string(char **arr, char *argv, t_s *n);
-t_s		*ft_argv_get_number(char **arr, char **argv, t_s *n);
+t_s		*ft_argv_get_number(char **argv, t_s *n);
 
 /// free 
 void	ft_free(char **arr);
 void	ft_list_free(t_s *n);
+void	ft_int_free(int **arr);
 
 ///chesk
 
@@ -38,12 +39,13 @@ int		ft_check_string(char **arr, char *argv);
 int		ft_check_argv(char **arr, char **argv);
 int		ft_strlen_arr(char **arr);
 int		ft_check_dublicate(t_s *n);
+int		ft_check_space(char **str);
+int		ft_check_normal_number(char **str);
+int		ft_chek_push_swap(t_s **a);
 
 ///find	
 int		ft_find_index_min(t_s *a);
 
-//exit
-void	ft_exit(void);
 //list
 t_s		*ft_new_list(int data);
 void	ft_printf_list(t_s *n);
@@ -64,10 +66,9 @@ void	ft_sort_5(t_s **a, t_s **b);
 void	ft_push_min(t_s **a, t_s**b);
 void	ft_norm(t_s **a);
 int		*ft_fill(t_s *a, int size, int *arr);
-void	ft_sort_bubble(int *arr);
 void	ft_norm(t_s **a);
 int		*ft_fill(t_s *a, int size, int *arr);
-void	ft_sort_bubble(int *arr);
+void	ft_sort_bubble(int *arr, int size);
 void	ft_butterfly(t_s **a, t_s **b);
 void	ft_a_to_b(t_s **a, t_s **b, int n);
 int		ft_sqrt(int size);

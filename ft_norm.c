@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 18:06:06 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/10 20:33:59 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:42:09 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,10 @@ void	ft_norm(t_s **a)
 	int	i;
 
 	tmp = *a;
+	arr = NULL;
 	size = ft_list_len(*a);
 	arr = ft_fill(*a, size, arr);
-	ft_sort_bubble(arr);
+	ft_sort_bubble(arr, size);
 	while (tmp)
 	{
 		i = 0;
@@ -57,7 +58,7 @@ int	*ft_fill(t_s *a, int size, int *arr)
 	return (arr);
 }
 
-void	ft_sort_bubble(int *arr)
+void	ft_sort_bubble(int *arr, int size)
 {
 	int	i;
 	int	j;
@@ -65,10 +66,10 @@ void	ft_sort_bubble(int *arr)
 
 	tmp = 0;
 	i = 0;
-	while (arr[i])
+	while (i < size - 1)
 	{
 		j = 0;
-		while (arr[j + 1])
+		while (j < size - i -1)
 		{
 			if (arr[j] > arr[j + 1])
 			{

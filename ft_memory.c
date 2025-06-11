@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/07 18:09:45 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/10 17:37:16 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:41:42 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,17 @@ void	ft_list_free(t_s *n)
 		n = n->next;
 		free(temp);
 	}
+}
+
+void	ft_int_free(int **arr)
+{
+	int	i;
+
+	i = 0;
+	while (arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
 }

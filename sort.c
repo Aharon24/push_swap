@@ -6,7 +6,7 @@
 /*   By: ahapetro <ahapetro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 18:31:47 by ahapetro          #+#    #+#             */
-/*   Updated: 2025/06/10 17:42:23 by ahapetro         ###   ########.fr       */
+/*   Updated: 2025/06/11 19:44:25 by ahapetro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,9 +61,7 @@ void	ft_sort_4(t_s **a, t_s **b)
 void	ft_sort_5(t_s **a, t_s **b)
 {
 	ft_push_min(a, b);
-	ft_push_min(a, b);
-	ft_sort_3(a);
-	pa(a, b);
+	ft_sort_4(a, b);
 	pa(a, b);
 }
 
